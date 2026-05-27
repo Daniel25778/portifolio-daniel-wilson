@@ -135,7 +135,6 @@ function SkillPill({ skill, url, icon }: { skill: string; url: string; icon?: st
           gsap.to(ref.current, { scale: 1, duration: 0.2 });
         }
       }}
-      ref={ref}
     >
       {icon && (
         <Image
