@@ -9,7 +9,7 @@ export const siteConfig = {
   phone: "(11) 94636-3724",
   linkedin: "https://linkedin.com/in/danielwilsonalves",
   github: "https://github.com/Daniel25778",
-  avatar: "/images/avatar.jpg", // <- substitua pela sua foto
+  avatar: "https://drive.google.com/file/d/1xCiAVkpnFQ-N7NpN8LFmqA7OAqecnpvu/view?usp=sharing", // <- substitua pela sua foto
   cvPath: "/cv-daniel.pdf", // <- coloque o nome do seu arquivo aqui (deve estar na pasta public)
 };
  

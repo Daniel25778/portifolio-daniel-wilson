@@ -62,12 +62,10 @@ export default function Navbar() {
 
         {/* Desktop nav */}
         <nav
+          className="hidden md:flex items-center"
           style={{
-            display: "flex",
             gap: "2rem",
-            alignItems: "center",
           }}
-          className="hidden md:flex"
         >
           {links.map((link) => (
             <a
@@ -139,6 +137,7 @@ export default function Navbar() {
 
           {/* Social */}
           <a
+            className="hidden sm:flex"
             href={siteConfig.github}
             target="_blank"
             rel="noopener noreferrer"
@@ -158,6 +157,7 @@ export default function Navbar() {
             <GitFork size={16} />
           </a>
           <a
+            className="hidden sm:flex"
             href={siteConfig.linkedin}
             target="_blank"
             rel="noopener noreferrer"
@@ -188,7 +188,6 @@ export default function Navbar() {
               background: "var(--surface)",
               color: "var(--text-muted)",
               cursor: "pointer",
-              display: "none",
             }}
             aria-label="Menu"
           >
