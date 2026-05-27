@@ -123,7 +123,6 @@ function SkillPill({ skill, url }: { skill: string; url: string }) {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      ref={ref}
       className="tag flex items-center gap-1.5 no-underline hover:text-accent"
       style={{ cursor: "pointer", transition: "all 0.2s" }}
       onMouseEnter={() => {

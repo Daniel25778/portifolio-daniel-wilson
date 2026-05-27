@@ -44,9 +44,10 @@ Coloque em `public/cv-daniel-wilson.pdf`.
 
 1. Crie o repo no GitHub
 2. Se o repo NÃO for `seuuser.github.io`, edite `.github/workflows/deploy.yml`:
-   `NEXT_PUBLIC_BASE_PATH: /nome-do-repo`
+   `NEXT_PUBLIC_BASE_PATH: /nome-do-repo` e também o `basePath` no `next.config.ts`.
 3. Settings → Pages → Source: **GitHub Actions**
 4. Push na branch `main` — o deploy é automático.
+5. **Nota:** Se aparecer o README, verifique se o "Source" nas configurações do GitHub Pages está como "GitHub Actions".
 
 ## Stack
 
@@ -76,4 +77,3 @@ portfolio/
     ├── images/projects/
     └── cv-daniel-wilson.pdf
 ```
-# portifolio-daniel-wilson
