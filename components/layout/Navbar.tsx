@@ -5,6 +5,7 @@ import { useTheme } from "next-themes";
 import { Sun, Moon, GitFork, Link2, Menu, X } from "lucide-react";
 import { useLang } from "@/lib/lang";
 import { nav, siteConfig } from "@/lib/data";
+import { GitHub, LinkedIn } from "@mui/icons-material";
 
 export default function Navbar() {
   const { theme, setTheme } = useTheme();
@@ -131,7 +132,7 @@ export default function Navbar() {
               }}
               aria-label="Toggle theme"
             >
-              {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
+              {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
             </button>
           )}
 
@@ -154,7 +155,7 @@ export default function Navbar() {
             }}
             aria-label="GitHub"
           >
-            <GitFork size={16} />
+            <GitHub sx={{ fontSize: 20}} />
           </a>
           <a
             className="hidden sm:flex"
@@ -174,7 +175,7 @@ export default function Navbar() {
             }}
             aria-label="LinkedIn"
           >
-            <Link2 size={16} />
+             <LinkedIn sx={{ fontSize: 21}} />
           </a>
 
           {/* Mobile menu toggle */}

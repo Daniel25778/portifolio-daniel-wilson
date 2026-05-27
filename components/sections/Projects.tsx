@@ -360,20 +360,7 @@ export default function Projects() {
         )}
 
         {/* Add project hint */}
-        <div
-          style={{
-            marginTop: "2rem",
-            padding: "1.5rem",
-            borderRadius: "12px",
-            border: "1px dashed var(--border)",
-            textAlign: "center",
-            color: "var(--text-muted)",
-            fontSize: "0.85rem",
-            fontFamily: "var(--font-mono)",
-          }}
-        >
-          {t({ en: "→ Add your projects in lib/data.ts", pt: "→ Adicione seus projetos em lib/data.ts" })}
-        </div>
+        
       </div>
     </section>
   );

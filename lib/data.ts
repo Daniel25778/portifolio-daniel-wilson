@@ -9,7 +9,7 @@ export const siteConfig = {
   phone: "(11) 94636-3724",
   linkedin: "https://linkedin.com/in/danielwilsonalves",
   github: "https://github.com/Daniel25778",
-  avatar: "https://drive.google.com/file/d/1xCiAVkpnFQ-N7NpN8LFmqA7OAqecnpvu/view?usp=sharing", // <- substitua pela sua foto
+  avatar: "/images/avatar.jpg", // <- Coloque sua foto em public/images/avatar.jpg
   cvPath: "/cv-daniel.pdf", // <- coloque o nome do seu arquivo aqui (deve estar na pasta public)
 };
  
@@ -163,7 +163,7 @@ export const projects: Project[] = [
       en: "I was the lead front-end developer for this national-scale platform offering free access to courses, materials and tools on management and productivity. I applied Clean Architecture, SOLID and Atomic Design throughout, and handled all Figma prototyping and usability presentations.",
       pt: "Fui o principal desenvolvedor front-end dessa plataforma de escala nacional com acesso gratuito a cursos, materiais e ferramentas sobre gestão e produtividade. Apliquei Clean Architecture, SOLID e Atomic Design, além de realizar toda a prototipagem no Figma.",
     },
-    image: "/images/projects/brasil-mais-produtivo.png", // <- adicione o screenshot
+    image: "https://cms.fiemt.ind.br/arquivos/ist/images/novobrasilmais%20produtivo.jpg",
     liveUrl: "https://www.plataformaprodutividade.com.br/",
     repoUrl: undefined,
   },
@@ -181,27 +181,33 @@ export const projects: Project[] = [
   // },
 ];
 
-export const skillGroups = [
+export type Skill = {
+  name: string;
+  url: string;
+  icon?: string;
+};
+
+export const skillGroups: { label: { en: string; pt: string }; skills: Skill[] }[] = [
   {
     label: { en: "Front-End", pt: "Front-End" },
     skills: [
-      { name: "React", url: "https://react.dev" },
-      { name: "Next.js", url: "https://nextjs.org" },
-      { name: "TypeScript", url: "https://www.typescriptlang.org" },
-      { name: "JavaScript", url: "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" },
-      { name: "Tailwind CSS", url: "https://tailwindcss.com" },
-      { name: "Material UI", url: "https://mui.com" },
-      { name: "Redux", url: "https://redux.js.org" },
-      { name: "React Query", url: "https://tanstack.com/query/latest" }
+      { name: "React", url: "https://react.dev", icon: "https://react.dev/favicon.ico" },
+      { name: "Next.js", url: "https://nextjs.org", icon: "https://nextjs.org/favicon.ico" },
+      { name: "TypeScript", url: "https://www.typescriptlang.org", icon: "https://www.typescriptlang.org/favicon.ico" },
+      { name: "JavaScript", url: "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/960px-JavaScript-logo.png" },
+      { name: "Tailwind CSS", url: "https://tailwindcss.com", icon: "https://tailwindcss.com/favicon.ico" },
+      { name: "Material UI", url: "https://mui.com", icon: "https://img.icons8.com/color/1200/material-ui.jpg" },
+      { name: "Redux", url: "https://redux.js.org", icon: "https://cdn.worldvectorlogo.com/logos/redux.svg" },
+      { name: "React Query", url: "https://tanstack.com/query/latest", icon: "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/2/react-query-icon-xjukes5xosrrwg3y3ics1f.png/react-query-icon-2dw36yx2b016w37mbipyn.png?_a=DATAiZAAZAA0" }
     ],
   },
   {
     label: { en: "Testing & Quality", pt: "Testes & Qualidade" },
     skills: [
-      { name: "Vitest", url: "https://vitest.dev" },
-      { name: "Jest", url: "https://jestjs.io" },
-      { name: "Testing Library", url: "https://testing-library.com" },
-      { name: "Selenium", url: "https://www.selenium.dev" }
+      { name: "Vitest", url: "https://vitest.dev", icon: "https://vitest.dev/favicon.ico" },
+      { name: "Jest", url: "https://jestjs.io", icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJOsYeOTYauafdERDWnI4WdMnpGPRFwsir0A&s" },
+      { name: "Testing Library", url: "https://testing-library.com", icon: "https://images.seeklogo.com/logo-png/43/1/testing-library-logo-png_seeklogo-434973.png" },
+      { name: "Selenium", url: "https://www.selenium.dev", icon: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Selenium_Logo.png" }
     ],
   },
   {
@@ -216,27 +222,26 @@ export const skillGroups = [
   {
     label: { en: "Mobile", pt: "Mobile" },
     skills: [
-      { name: "React Native", url: "https://reactnative.dev" },
-      { name: "Kotlin", url: "https://kotlinlang.org" }
+      { name: "React Native", url: "https://reactnative.dev", icon: "https://reactnative.dev/favicon.ico" },
+      { name: "Kotlin", url: "https://kotlinlang.org", icon: "https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png" }
     ],
   },
   {
     label: { en: "Back-End & DB", pt: "Back-End & BD" },
     skills: [
-      { name: "Node.js", url: "https://nodejs.org" },
-      { name: "TypeScript", url: "https://www.typescriptlang.org" },
-      { name: "PostgreSQL", url: "https://www.postgresql.org" },
-      { name: "MySQL", url: "https://www.mysql.com" }
+      { name: "Node.js", url: "https://nodejs.org", icon: "https://nodejs.org/favicon.ico" },
+      { name: "TypeScript", url: "https://www.typescriptlang.org", icon: "https://www.typescriptlang.org/favicon.ico" },
+      { name: "PostgreSQL", url: "https://www.postgresql.org", icon: "https://www.postgresql.org/favicon.ico" },
+      { name: "MySQL", url: "https://www.mysql.com", icon: "https://1000logos.net/wp-content/uploads/2020/08/MySQL-Logo.png" }
     ],
   },
   {
     label: { en: "Design & Tools", pt: "Design & Ferramentas" },
     skills: [
-      { name: "Figma", url: "https://www.figma.com" },
-      { name: "Storybook", url: "https://storybook.js.org" },
-      { name: "Swagger", url: "https://swagger.io" },
-      { name: "Azure DevOps", url: "https://azure.microsoft.com/services/devops/" },
-      { name: "Scrum", url: "https://www.scrum.org" }
+      { name: "Figma", url: "https://www.figma.com", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/500px-Figma-logo.svg.png" },
+      { name: "Storybook", url: "https://storybook.js.org", icon: "https://icons.veryicon.com/png/o/business/vscode-program-item-icon/storybook.png" },
+      { name: "Swagger", url: "https://swagger.io", icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/swagger.png" },
+      { name: "Azure DevOps", url: "https://azure.microsoft.com/services/devops/", icon: "https://azure.microsoft.com/favicon.ico" },
     ],
   },
 ];

@@ -4,8 +4,9 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLang } from "@/lib/lang";
-import { skillGroups } from "@/lib/data";
+import { skillGroups, Skill } from "@/lib/data";
 import { Code2 } from "lucide-react";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -104,7 +105,7 @@ export default function Skills() {
                 }}
               >
                 {group.skills.map((skill) => (
-                  <SkillPill key={skill.name} skill={skill.name} url={skill.url} />
+                  <SkillPill key={skill.name} skill={skill.name} url={skill.url} icon={skill.icon} />
                 ))}
               </div>
             </div>
@@ -114,8 +115,7 @@ export default function Skills() {
     </section>
   );
 }
-
-function SkillPill({ skill, url }: { skill: string; url: string }) {
+function SkillPill({ skill, url, icon }: { skill: string; url: string; icon?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
 
   return (
@@ -135,8 +135,17 @@ function SkillPill({ skill, url }: { skill: string; url: string }) {
           gsap.to(ref.current, { scale: 1, duration: 0.2 });
         }
       }}
+      ref={ref}
     >
-      <Code2 size={12} className="opacity-70" />
+      {icon && (
+        <Image
+          src={icon}
+          alt={`${skill} icon`}
+          width={16}
+          height={16}
+          className="rounded-full"
+        />
+      )}
       {skill}
     </a>
   );
