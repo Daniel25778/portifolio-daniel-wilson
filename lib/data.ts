@@ -9,7 +9,7 @@ export const siteConfig = {
   phone: "(11) 94636-3724",
   linkedin: "https://linkedin.com/in/danielwilsonalves",
   github: "https://github.com/Daniel25778",
-  avatar: "/images/avatar.jpg", // <- Coloque sua foto em public/images/avatar.jpg
+  avatar: "/avatar.jpg", // <- Coloque sua foto em public/images/avatar.jpg
   cvPath: "/cv-daniel.pdf", // <- coloque o nome do seu arquivo aqui (deve estar na pasta public)
 };
  
@@ -253,14 +253,16 @@ export const education = {
       degree: { en: "Systems Analysis and Development", pt: "Análise e Desenvolvimento de Sistemas" },
       period: "Feb 2022 – Dec 2024",
       logo: "https://s3.amazonaws.com/wpfiap/wp-content/uploads/2026/05/fiap-share-img.png",
-      certificateUrl: "https://your-certificate-link.com",
+      label: { en: "Download Certificate", pt: "Baixar certificado" },
+      certificateUrl: "/diploma-facul.pdf",
     },
     {
       institution: "SENAI São Paulo",
       degree: { en: "Technical: Systems Development", pt: "Técnico em Desenvolvimento de Sistemas" },
       period: "Feb 2021 – Jun 2022",
       logo: "https://yt3.googleusercontent.com/wyGnsuVLCBoHStdhQ3Tj7Wr48yb_Oi2e1OmP2Rly99xB6wwe66T64bhCNDZkP5xxNHxF-lsE1A=s900-c-k-c0x00ffffff-no-rj",
-      certificateUrl: "https://your-certificate-link.com",
+      label: { en: "Download Certificate", pt: "Baixar certificado" },
+      certificateUrl: "/diploma-facul.pdf",
     },
   ],
   complementary: [

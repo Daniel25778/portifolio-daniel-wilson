@@ -106,12 +106,12 @@ export default function Education() {
                   <p className="text-sm text-text-muted mb-5 leading-relaxed">{t(edu.degree)}</p>
                   {edu.certificateUrl && (
                     <a
-                      href={edu.certificateUrl}
-                      target="_blank"
+                    href={edu.certificateUrl} 
+                      download
                       className="inline-flex items-center gap-1.5 text-xs font-semibold text-accent hover:underline"
                     >
                       <FileText size={14} />
-                      {t({ en: "View Certificate", pt: "Ver Certificado" })}
+                      {t(edu.label)}
                     </a>
                   )}
                 </div>
