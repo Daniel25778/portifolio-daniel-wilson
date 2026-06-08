@@ -9,8 +9,8 @@ export const siteConfig = {
   phone: "(11) 94636-3724",
   linkedin: "https://linkedin.com/in/danielwilsonalves",
   github: "https://github.com/Daniel25778",
-  avatar: "/avatar.jpg", // <- Coloque sua foto em public/images/avatar.jpg
-  cvPath: "/cv-daniel.pdf", // <- coloque o nome do seu arquivo aqui (deve estar na pasta public)
+  avatar: "/avatar.jpg", // Se a foto estiver em public/images/avatar.jpg, mude para "/images/avatar.jpg"
+  cvPath: "/cv-daniel.pdf", // Certifique-se que o nome e extensão (ex: .pdf) estão idênticos ao arquivo real
 };
  
 export const nav = {
@@ -167,18 +167,17 @@ export const projects: Project[] = [
     liveUrl: "https://www.plataformaprodutividade.com.br/",
     repoUrl: undefined,
   },
-  // ─── Adicione seus próprios projetos abaixo ───────────────────────────────
-  // {
-  //   slug: "meu-projeto",
-  //   title: "Meu Projeto",
-  //   featured: false,
-  //   tags: ["Next.js", "TypeScript"],
-  //   description: { en: "...", pt: "..." },
-  //   longDescription: { en: "...", pt: "..." },
-  //   image: "/images/projects/meu-projeto.png",
-  //   liveUrl: "https://...",
-  //   repoUrl: "https://github.com/...",
-  // },
+  {
+    slug: "consultools",
+    title: "Consultools",
+    featured: true,
+    tags: ["React", "TypeScript", "Tailwind", "Material UI", "Clean Architecture", "Figma"],
+    description: { en: "Consultancy management system focusing on organizational efficiency and employee reporting.", pt: "Sistema de gestão de consultoria com foco em eficiência organizacional e apontamentos de colaboradores." },
+    longDescription: { en: "A system created to meet consultancy needs, focusing on organizing companies, employees, machinery, shifts, workstations, and especially report management—reports created by employees to document and streamline the process.", pt: 'Sistema criado para atender as necessidades de consultoria, com foco em organizar empresas, bem como seus colaboradores, máquinas, turnos, postos de trabalho e principalmente a gestão de apontamentos, apontamentos esses criados pelo os colaboradores com o objetivo de documentar e deixar o processo mais eficiente' },
+    image: "/home-consultools.png", // Adicione a barra inicial para caminhos absolutos na pasta public
+    liveUrl: "https://consultools-front.vercel.app/",
+    repoUrl: "https://github.com/Daniel25778/consultools-front",
+  }
 ];
 
 export type Skill = {

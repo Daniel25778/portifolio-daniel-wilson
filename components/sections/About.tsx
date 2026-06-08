@@ -100,6 +100,7 @@ export default function About() {
                 fill
                 className="object-cover"
                 priority
+                unoptimized // Required for static export on Vercel/GitHub Pages
               />
             </div>
 
