@@ -106,9 +106,27 @@ export default function Education() {
                   <p className="text-sm text-text-muted mb-5 leading-relaxed">{t(edu.degree)}</p>
                   {edu.certificateUrl && (
                     <a
-                    href={edu.certificateUrl} 
-                      download
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-accent hover:underline"
+                     href={edu.certificateUrl}
+                    onClick={async (e) => {
+                      e.preventDefault();
+                      const path = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}${edu.certificateUrl}`;
+                      try {
+                        const response = await fetch(path);
+                        const blob = await response.blob();
+                        const url = URL.createObjectURL(blob);
+                        const link = document.createElement("a");
+                        link.href = url;
+                        link.download = edu.certificateUrl.split("/").pop() || "certificado.pdf";
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                        URL.revokeObjectURL(url);
+                      } catch {
+                        window.open(path, "_blank");
+                      }
+                    }}
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-accent hover:underline"
+                    style={{ cursor: "pointer" }}
                     >
                       <FileText size={14} />
                       {t(edu.label)}
@@ -222,8 +240,9 @@ export default function Education() {
 
                   {course.certificateUrl ? (
                     <a
-                      href={course.certificateUrl}
+                     href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${course.certificateUrl}`}
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 text-xs font-semibold text-accent opacity-70 hover:opacity-100 transition-opacity"
                     >
                       <ExternalLink size={13} />

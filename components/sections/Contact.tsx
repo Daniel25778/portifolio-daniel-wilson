@@ -38,7 +38,7 @@ export default function Contact() {
     {
       icon: <Mail size={20} />,
       label: siteConfig.email,
-      href: `mailto:${siteConfig.email}`,
+      href: `https://mail.google.com/mail/?view=cm&to=${siteConfig.email}`,
     },
     {
       icon: <Link2 size={20} />,
@@ -148,7 +148,9 @@ export default function Contact() {
 
           {/* Main CTA */}
           <a
-            href={`mailto:${siteConfig.email}`}
+            href={`https://mail.google.com/mail/?view=cm&to=${siteConfig.email}`}
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               display: "inline-flex",
               alignItems: "center",

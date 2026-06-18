@@ -323,23 +323,23 @@ export default function Hero() {
           <a
             href={siteConfig.cvPath}
             onClick={async (e) => {
-              e.preventDefault();
-              try {
-                const response = await fetch(siteConfig.cvPath);
-                const blob = await response.blob();
-                const url = URL.createObjectURL(blob);
-                const link = document.createElement("a");
-                link.href = url;
-                link.download = "cv-daniel-wilson-alves.pdf"; // nome do arquivo que o usuário vai baixar
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-                URL.revokeObjectURL(url);
-              } catch {
-                // fallback: abre em nova aba
-                window.open(siteConfig.cvPath, "_blank");
-              }
-            }}
+            e.preventDefault();
+            const path = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}${siteConfig.cvPath}`;
+            try {
+              const response = await fetch(path);
+              const blob = await response.blob();
+              const url = URL.createObjectURL(blob);
+              const link = document.createElement("a");
+              link.href = url;
+              link.download = "CV-Daniel-Wilson.pdf";
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+              URL.revokeObjectURL(url);
+            } catch {
+              window.open(path, "_blank");
+            }
+          }}
             style={{
               display: "inline-flex",
               alignItems: "center",

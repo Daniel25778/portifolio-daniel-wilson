@@ -163,7 +163,7 @@ export const projects: Project[] = [
       en: "I was the lead front-end developer for this national-scale platform offering free access to courses, materials and tools on management and productivity. I applied Clean Architecture, SOLID and Atomic Design throughout, and handled all Figma prototyping and usability presentations.",
       pt: "Fui o principal desenvolvedor front-end dessa plataforma de escala nacional com acesso gratuito a cursos, materiais e ferramentas sobre gestão e produtividade. Apliquei Clean Architecture, SOLID e Atomic Design, além de realizar toda a prototipagem no Figma.",
     },
-    image: "https://cms.fiemt.ind.br/arquivos/ist/images/novobrasilmais%20produtivo.jpg",
+    image: "/brasil-mais-produtivo.jpg",
     liveUrl: "https://www.plataformaprodutividade.com.br/",
     repoUrl: undefined,
   },
@@ -245,7 +245,8 @@ export const skillGroups: { label: { en: string; pt: string }; skills: Skill[] }
   },
 ];
 
-export const education = {
+
+  export const education = {
   main: [
     {
       institution: "FIAP – SP",
@@ -266,17 +267,23 @@ export const education = {
   ],
   complementary: [
     {
-      name: { en: "Advanced React & Next.js", pt: "React Avançado & Next.js" },
-      provider: "Cod3r",
-      year: "2023",
-      certificateUrl: "https://your-certificate-link.com",
+      name: { en: "Programming Logic", pt: "Lógica de Programação" },
+      provider: "FIAP",
+      year: "2026",
+      certificateUrl: "https://on.fiap.com.br/local/nivelamento/gerar_certificado.php?chave=af113c86d94bfedbfe5ecd8b77aea21b&action=view",
     },
     {
-      name: { en: "UI Design for Developers", pt: "UI Design para Desenvolvedores" },
-      provider: "Origamid",
-      year: "2022",
-      certificateUrl: "https://your-certificate-link.com",
-    }
+      name: { en: "Front End", pt: "Front End" },
+      provider: "FIAP Nano Course",
+      year: "2026",
+      certificateUrl: "https://on.fiap.com.br/local/nanocourses/gerar_certificado.php?chave=02310E92DAE4416BDC148FA351DF7101&action=view",
+    },
+    {
+      name: { en: "Professional Qualification in Web 2.0 Analysis and Design (6DE0ECE6)", pt: "Qualificação Profissional em Análise e Design Web 2.0 (6DE0ECE6)" },
+      provider: "FIAP",
+      year: "2023",
+      certificateUrl: "https://www.fiap.com.br/consultadocumento",
+    },
   ]
 };
 
