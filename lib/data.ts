@@ -262,7 +262,7 @@ export const skillGroups: { label: { en: string; pt: string }; skills: Skill[] }
       period: "Feb 2021 – Jun 2022",
       logo: "https://yt3.googleusercontent.com/wyGnsuVLCBoHStdhQ3Tj7Wr48yb_Oi2e1OmP2Rly99xB6wwe66T64bhCNDZkP5xxNHxF-lsE1A=s900-c-k-c0x00ffffff-no-rj",
       label: { en: "Download Certificate", pt: "Baixar certificado" },
-      certificateUrl: "/diploma-facul.pdf",
+      certificateUrl: "/declaracao-curso-tecnico.pdf",
     },
   ],
   complementary: [
@@ -271,6 +271,12 @@ export const skillGroups: { label: { en: string; pt: string }; skills: Skill[] }
       provider: "FIAP",
       year: "2026",
       certificateUrl: "https://on.fiap.com.br/local/nivelamento/gerar_certificado.php?chave=af113c86d94bfedbfe5ecd8b77aea21b&action=view",
+    },
+    {
+      name: { en: "Tailwind CSS from basic to advanced + Projects", pt: "Tailwind CSS do básico ao avançado + Projetos" },
+      provider: "UDEMY",
+      year: "2025",
+      certificateUrl: "https://udemy-certificate.s3.amazonaws.com/pdf/UC-4a920a35-61c2-4cea-a3e3-8748d68f2762.pdf",
     },
     {
       name: { en: "Front End", pt: "Front End" },
