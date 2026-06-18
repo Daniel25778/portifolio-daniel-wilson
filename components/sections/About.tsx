@@ -94,14 +94,18 @@ export default function About() {
                 overflow: "hidden",
               }}
             >
-              <Image
-                src={siteConfig.avatar}
-                alt={siteConfig.name}
-                fill
-                className="object-cover"
-                priority
-                unoptimized // Required for static export on Vercel/GitHub Pages
-              />
+            <img
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${siteConfig.avatar}`}
+              alt={siteConfig.name}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                position: "absolute",
+                top: 0,
+                left: 0,
+              }}
+            />
             </div>
 
             {/* Quick info */}

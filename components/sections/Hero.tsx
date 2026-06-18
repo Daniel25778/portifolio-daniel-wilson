@@ -322,7 +322,24 @@ export default function Hero() {
           </a>
           <a
             href={siteConfig.cvPath}
-            download
+            onClick={async (e) => {
+              e.preventDefault();
+              try {
+                const response = await fetch(siteConfig.cvPath);
+                const blob = await response.blob();
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement("a");
+                link.href = url;
+                link.download = "cv-daniel-wilson-alves.pdf"; // nome do arquivo que o usuário vai baixar
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(url);
+              } catch {
+                // fallback: abre em nova aba
+                window.open(siteConfig.cvPath, "_blank");
+              }
+            }}
             style={{
               display: "inline-flex",
               alignItems: "center",
@@ -335,6 +352,7 @@ export default function Hero() {
               fontWeight: 600,
               fontSize: "0.9rem",
               textDecoration: "none",
+              cursor: "pointer",
               transition: "border-color 0.2s, transform 0.2s",
             }}
             onMouseEnter={(e) => {

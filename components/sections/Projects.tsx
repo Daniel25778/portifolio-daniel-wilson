@@ -119,7 +119,18 @@ export default function Projects() {
                   fontSize: "0.85rem",
                 }}
               >
-                <Image src={project.image} alt={project.title} fill style={{ objectFit: "cover" }} />
+                <img
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${project.image}`}
+                  alt={project.title}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                  }}
+                />
               </div>
 
               {/* Featured badge */}
