@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: "Daniel Wilson",
   role: {
-    en: "Front-End Developer",
-    pt: "Desenvolvedor Front-End",
+    en: "Mid-level Front-End Developer",
+    pt: "Desenvolvedor Front-End Pleno",
   },
   location: "Carapicuíba, SP — Brasil",
   email: "danielcawil94@gmail.com",
@@ -167,17 +167,17 @@ export const projects: Project[] = [
     liveUrl: "https://www.plataformaprodutividade.com.br/",
     repoUrl: undefined,
   },
-  {
-    slug: "consultools",
-    title: "Consultools",
-    featured: true,
-    tags: ["React", "TypeScript", "Tailwind", "Material UI", "Clean Architecture", "Figma"],
-    description: { en: "Consultancy management system focusing on organizational efficiency and employee reporting.", pt: "Sistema de gestão de consultoria com foco em eficiência organizacional e apontamentos de colaboradores." },
-    longDescription: { en: "A system created to meet consultancy needs, focusing on organizing companies, employees, machinery, shifts, workstations, and especially report management—reports created by employees to document and streamline the process.", pt: 'Sistema criado para atender as necessidades de consultoria, com foco em organizar empresas, bem como seus colaboradores, máquinas, turnos, postos de trabalho e principalmente a gestão de apontamentos, apontamentos esses criados pelo os colaboradores com o objetivo de documentar e deixar o processo mais eficiente' },
-    image: "/home-consultools.png", // Adicione a barra inicial para caminhos absolutos na pasta public
-    liveUrl: "https://consultools-front.vercel.app/",
-    repoUrl: "https://github.com/Daniel25778/consultools-front",
-  }
+  // {
+  //   slug: "consultools",
+  //   title: "Consultools",
+  //   featured: true,
+  //   tags: ["React", "TypeScript", "Tailwind", "Material UI", "Clean Architecture", "Figma"],
+  //   description: { en: "Consultancy management system focusing on organizational efficiency and employee reporting.", pt: "Sistema de gestão de consultoria com foco em eficiência organizacional e apontamentos de colaboradores." },
+  //   longDescription: { en: "A system created to meet consultancy needs, focusing on organizing companies, employees, machinery, shifts, workstations, and especially report management—reports created by employees to document and streamline the process.", pt: 'Sistema criado para atender as necessidades de consultoria, com foco em organizar empresas, bem como seus colaboradores, máquinas, turnos, postos de trabalho e principalmente a gestão de apontamentos, apontamentos esses criados pelo os colaboradores com o objetivo de documentar e deixar o processo mais eficiente' },
+  //   image: "/home-consultools.png", // Adicione a barra inicial para caminhos absolutos na pasta public
+  //   liveUrl: "https://consultools-front.vercel.app/",
+  //   repoUrl: "https://github.com/Daniel25778/consultools-front",
+  // }
 ];
 
 export type Skill = {

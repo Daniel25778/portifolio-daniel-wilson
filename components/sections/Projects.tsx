@@ -156,108 +156,104 @@ export default function Projects() {
               </div>
             </div>
 
-            {/* Content */}
-            <div  className="flex flex-col">
-              <h3
-                style={{
-                  fontFamily: "var(--font-display)",
-                  fontSize: "1.6rem",
-                  marginTop: "0.75rem",
-                  marginLeft: "1rem",
-                  fontWeight: 800,
-                  letterSpacing: "-0.02em",
-                  color: "var(--text)",
-                  marginBottom: "0.75rem",
-                }}
-              >
-                {project.title}
-              </h3>
-              <p
-                style={{
-                  fontSize: "0.9rem",
-                   marginLeft: "1rem",
-                  color: "var(--text-muted)",
-                  lineHeight: 1.75,
-                  marginBottom: "1.25rem",
-                }}
-              >
-                {t(project.longDescription)}
-              </p>
+           {/* Content */}
+<div className="flex flex-col" style={{ padding: "0 1.25rem 1.25rem 1.25rem" }}>
+  <h3
+    style={{
+      fontFamily: "var(--font-display)",
+      fontSize: "1.6rem",
+      marginTop: "0.75rem",
+      fontWeight: 800,
+      letterSpacing: "-0.02em",
+      color: "var(--text)",
+      marginBottom: "0.75rem",
+    }}
+  >
+    {project.title}
+  </h3>
+  <p
+    style={{
+      fontSize: "0.9rem",
+      color: "var(--text-muted)",
+      lineHeight: 1.75,
+      marginBottom: "1.25rem",
+    }}
+  >
+    {t(project.longDescription)}
+  </p>
 
-              {/* Tags */}
-              <div
-                style={{
-                  display: "flex",
-                  flexWrap: "wrap",
-                  gap: "0.4rem",
-                   marginLeft: "1rem",
-                  marginBottom: "1.75rem",
-                }}
-              >
-                {project.tags.map((tag) => (
-                  <span key={tag} className="tag">
-                    {tag}
-                  </span>
-                ))}
-              </div>
+  {/* Tags */}
+  <div
+    style={{
+      display: "flex",
+      flexWrap: "wrap",
+      gap: "0.4rem",
+      marginBottom: "1.75rem",
+    }}
+  >
+    {project.tags.map((tag) => (
+      <span key={tag} className="tag">
+        {tag}
+      </span>
+    ))}
+  </div>
 
-              {/* Links */}
-              <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
-                {project.liveUrl && (
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: "0.4rem",
-                       marginLeft: "1rem",
-                      padding: "0.55rem 1.1rem",
-                      borderRadius: "8px",
-                      background: "var(--accent)",
-                      color: "#fff",
-                      fontSize: "0.85rem",
-                      fontWeight: 600,
-                      textDecoration: "none",
-                      transition: "opacity 0.2s",
-                    }}
-                    onMouseEnter={(e) =>
-                      ((e.currentTarget as HTMLElement).style.opacity = "0.85")
-                    }
-                    onMouseLeave={(e) =>
-                      ((e.currentTarget as HTMLElement).style.opacity = "1")
-                    }
-                  >
-                    <ExternalLink size={14} />
-                    {t({ en: "Live site", pt: "Ver site" })}
-                  </a>
-                )}
-                {project.repoUrl && (
-                  <a
-                    href={project.repoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: "0.4rem",
-                      padding: "0.55rem 1.1rem",
-                      borderRadius: "8px",
-                      border: "1px solid var(--border)",
-                      background: "var(--surface)",
-                      color: "var(--text)",
-                      fontSize: "0.85rem",
-                      fontWeight: 600,
-                      textDecoration: "none",
-                    }}
-                  >
-                    <GitFork size={14} />
-                    {t({ en: "Repository", pt: "Repositório" })}
-                  </a>
-                )}
-              </div>
-            </div>
+  {/* Links */}
+  <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
+    {project.liveUrl && (
+      <a
+        href={project.liveUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          display: "inline-flex",
+          alignItems: "center",
+          gap: "0.4rem",
+          padding: "0.55rem 1.1rem",
+          borderRadius: "8px",
+          background: "var(--accent)",
+          color: "#fff",
+          fontSize: "0.85rem",
+          fontWeight: 600,
+          textDecoration: "none",
+          transition: "opacity 0.2s",
+        }}
+        onMouseEnter={(e) =>
+          ((e.currentTarget as HTMLElement).style.opacity = "0.85")
+        }
+        onMouseLeave={(e) =>
+          ((e.currentTarget as HTMLElement).style.opacity = "1")
+        }
+      >
+        <ExternalLink size={14} />
+        {t({ en: "Live site", pt: "Ver site" })}
+      </a>
+    )}
+    {project.repoUrl && (
+       <a
+        href={project.repoUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          display: "inline-flex",
+          alignItems: "center",
+          gap: "0.4rem",
+          padding: "0.55rem 1.1rem",
+          borderRadius: "8px",
+          border: "1px solid var(--border)",
+          background: "var(--surface)",
+          color: "var(--text)",
+          fontSize: "0.85rem",
+          fontWeight: 600,
+          textDecoration: "none",
+        }}
+      >
+        <GitFork size={14} />
+        {t({ en: "Repository", pt: "Repositório" })}
+      </a>
+    )}
+  </div>
+</div>
           </div>
         ))}
 

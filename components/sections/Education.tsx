@@ -240,7 +240,11 @@ export default function Education() {
 
                   {course.certificateUrl ? (
                     <a
-                     href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${course.certificateUrl}`}
+                      href={
+                        course.certificateUrl.startsWith("http")
+                          ? course.certificateUrl
+                          : `${process.env.NEXT_PUBLIC_BASE_PATH || ""}${course.certificateUrl}`
+                      }
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 text-xs font-semibold text-accent opacity-70 hover:opacity-100 transition-opacity"
