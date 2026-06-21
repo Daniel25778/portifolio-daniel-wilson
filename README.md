@@ -1,5 +1,7 @@
 # Daniel Wilson — Portfolio
 
+![Demo](./public/portfolio.gif)
+
 Portfolio profissional com Next.js 15, TypeScript, Tailwind CSS, GSAP, tema claro/escuro e bilíngue PT/EN.
 
 ## Stack
