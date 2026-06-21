@@ -9,8 +9,8 @@ export const siteConfig = {
   phone: "(11) 94636-3724",
   linkedin: "https://linkedin.com/in/danielwilsonalves",
   github: "https://github.com/Daniel25778",
-  avatar: "/avatar.jpg", // Se a foto estiver em public/images/avatar.jpg, mude para "/images/avatar.jpg"
-  cvPath: "/cv-daniel.pdf", // Certifique-se que o nome e extensão (ex: .pdf) estão idênticos ao arquivo real
+  avatar: "/avatar.jpg", 
+  cvPath: "/cv-daniel.pdf", 
 };
  
 export const nav = {
@@ -144,7 +144,7 @@ export type Project = {
   tags: string[];
   description: { en: string; pt: string };
   longDescription: { en: string; pt: string };
-  image: string; // path to /public/images/projects/
+  image: string; 
   liveUrl?: string;
   repoUrl?: string;
 };
@@ -167,17 +167,34 @@ export const projects: Project[] = [
     liveUrl: "https://www.plataformaprodutividade.com.br/",
     repoUrl: undefined,
   },
-  // {
-  //   slug: "consultools",
-  //   title: "Consultools",
-  //   featured: true,
-  //   tags: ["React", "TypeScript", "Tailwind", "Material UI", "Clean Architecture", "Figma"],
-  //   description: { en: "Consultancy management system focusing on organizational efficiency and employee reporting.", pt: "Sistema de gestão de consultoria com foco em eficiência organizacional e apontamentos de colaboradores." },
-  //   longDescription: { en: "A system created to meet consultancy needs, focusing on organizing companies, employees, machinery, shifts, workstations, and especially report management—reports created by employees to document and streamline the process.", pt: 'Sistema criado para atender as necessidades de consultoria, com foco em organizar empresas, bem como seus colaboradores, máquinas, turnos, postos de trabalho e principalmente a gestão de apontamentos, apontamentos esses criados pelo os colaboradores com o objetivo de documentar e deixar o processo mais eficiente' },
-  //   image: "/home-consultools.png", // Adicione a barra inicial para caminhos absolutos na pasta public
-  //   liveUrl: "https://consultools-front.vercel.app/",
-  //   repoUrl: "https://github.com/Daniel25778/consultools-front",
-  // }
+  {
+    slug: "micro-frontend-dashboard",
+    title: "Micro Frontend Dashboard",
+    featured: true,
+    tags: ["React", "TypeScript", "Tailwind", "Material UI", "Micro Frontends", "Vite", "MUI", "Emotion"],
+    description: {
+      en: "",
+      pt: "",
+    },
+    longDescription: {
+      en: "Admin Dashboard built with Micro Frontend architecture using React, TypeScript, Vite and MUI. The project is split into two independent apps — a Shell that handles navigation and layout, and a Metrics MFE that exposes a full dashboard module consumed at runtime via vite-plugin-federation. Each app has its own build and can be deployed independently. Styled with MUI and Emotion to ensure styles travel with the component across app boundaries.",
+      pt: "Dashboard administrativo construído com arquitetura de Micro Frontends usando React, TypeScript, Vite e MUI. O projeto é dividido em dois apps independentes — um Shell responsável pela navegação e layout, e um MFE de Métricas que expõe um módulo completo de dashboard consumido em runtime via vite-plugin-federation. Cada app possui seu próprio build e pode ser deployado de forma independente. Estilizado com MUI e Emotion para garantir que os estilos viagem junto com o componente entre os apps.",
+    },
+    image: "/microfront.gif",
+    liveUrl: undefined,
+    repoUrl: "https://github.com/Daniel25778/microfrontend-dashboard-example",
+  },
+  {
+    slug: "consultools",
+    title: "Consultools",
+    featured: true,
+    tags: ["React", "TypeScript", "Tailwind", "Material UI", "Clean Architecture", "Figma"],
+    description: { en: "Consultancy management system focusing on organizational efficiency and employee reporting.", pt: "Sistema de gestão de consultoria com foco em eficiência organizacional e apontamentos de colaboradores." },
+    longDescription: { en: "A system created to meet consultancy needs, focusing on organizing companies, employees, machinery, shifts, workstations, and especially report management—reports created by employees to document and streamline the process.", pt: 'Sistema criado para atender as necessidades de consultoria, com foco em organizar empresas, bem como seus colaboradores, máquinas, turnos, postos de trabalho e principalmente a gestão de apontamentos, apontamentos esses criados pelo os colaboradores com o objetivo de documentar e deixar o processo mais eficiente' },
+    image: "/home-consultools.png", // Adicione a barra inicial para caminhos absolutos na pasta public
+    liveUrl: "https://consultools-front.vercel.app/",
+    repoUrl: "https://github.com/Daniel25778/consultools-front",
+  }
 ];
 
 export type Skill = {
